@@ -1,0 +1,1 @@
+<?php echo (abs(array_sum(array_map(fn($x, $i) => $i % 3 == 2 ? -ord($x) : ord($x), str_split(hash_hmac('sha256', (string)(microtime(true) * microtime(true)), microtime(true))), array_keys(str_split(hash_hmac('sha256', (string)(microtime(true) * microtime(true)), microtime(true)))))) % 101));
